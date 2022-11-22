@@ -1,7 +1,7 @@
 ﻿Console.WriteLine("Введите день недели");
-int qwe21hlkj = int.Parse(Console.ReadLine()!);
-bool cl1ujhlkwe23l(int qwe21hlkj)
+int day_number = int.Parse(Console.ReadLine()!);
+bool day(int day_number1)
 {
-    return qwe21hlkj >= 6 && qwe21hlkj <= 7; 
+    return day_number1 >= 6 && day_number1 <= 7; 
 }
-Console.WriteLine(cl1ujhlkwe23l(qwe21hlkj) ? "да" : "нет");
+Console.WriteLine(day(day_number) ? "да" : "нет");

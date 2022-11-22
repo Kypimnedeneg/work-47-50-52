@@ -1,22 +1,22 @@
 ﻿Console.WriteLine("Ведите  число:");
-int k39j1d2i = Convert.ToInt32(Console.ReadLine());
-int d21l0k(int d12lzcx1)
+int number = Convert.ToInt32(Console.ReadLine());
+int first_number(int num1)
 {
-    while (d12lzcx1 >= 1000)
+    while (num1 >= 1000)
     {
-        d12lzcx1 = d12lzcx1 / 10;
+        num1 = num1 / 10;
        
     }
-return d12lzcx1 % 10;
+return num1 % 10;
 }
-if (k39j1d2i < 0)
+if (number < 0)
 {
-    k39j1d2i = Math.Abs(k39j1d2i);
+    number = Math.Abs(number);
 }
-if (k39j1d2i> 99)
+if (number> 99)
 {
-    int dwlqd12 = d21l0k(k39j1d2i);
-    Console.WriteLine(dwlqd12);
+    int result = first_number(number);
+    Console.WriteLine(result);
 }
 else
 {

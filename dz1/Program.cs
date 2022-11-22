@@ -1,10 +1,10 @@
 ﻿Console.WriteLine("Ведите трёхзначное число:");
-int woldk13d21dsa01 = Convert.ToInt32(Console.ReadLine());
-int d3123g3hgh12(int d312j932ju1e0912901k)
+int three_digit_number = Convert.ToInt32(Console.ReadLine());
+int num1(int num2)
 {
-    d312j932ju1e0912901k = d312j932ju1e0912901k / 10;
-    return  d312j932ju1e0912901k % 10 ;
+    num2 = num2 / 10;
+    return  num2 % 10 ;
 }
-int fgfgsgf321 = d3123g3hgh12(woldk13d21dsa01);
+int result = num1(three_digit_number);
 Console.WriteLine($"Вторая цифра:");
-Console.WriteLine(fgfgsgf321);
+Console.WriteLine(result);
