@@ -1,7 +1,19 @@
-﻿Console.WriteLine("Введите день недели");
-int day_number = int.Parse(Console.ReadLine()!);
-bool day(int day_number1)
+﻿System.Console.WriteLine("Введите 5 значое число");
+int number = Convert.ToInt32(Console.ReadLine());
+int Palindrom(int n)
 {
-    return day_number1 >= 6 && day_number1 <= 7; 
+    int number1 = n/10000;
+    int number2 = n / 1000 % 10;
+    int number4 = n / 10 % 10;
+    int number5 = n%10;
+    if(number1 ==  number5 && number2 == number4) 
+    {
+        Console.WriteLine($"{number} -> да");
+    }
+    else
+    {
+       Console.WriteLine($"{number} -> нет"); 
+    }
+return n;
 }
-Console.WriteLine(day(day_number) ? "да" : "нет");
+int res = Palindrom(number);
