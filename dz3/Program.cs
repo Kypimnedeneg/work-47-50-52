@@ -1,19 +1,24 @@
-﻿System.Console.WriteLine("Введите 5 значое число");
-int number = Convert.ToInt32(Console.ReadLine());
-int Palindrom(int n)
+﻿int[] array = new int[8];
+void Result(int[] arr)
 {
-    int number1 = n/10000;
-    int number2 = n / 1000 % 10;
-    int number4 = n / 10 % 10;
-    int number5 = n%10;
-    if(number1 ==  number5 && number2 == number4) 
+    Random rnd = new Random();
+    for (int i = 0; i < arr.Length; i++)
     {
-        Console.WriteLine($"{number} -> да");
+        arr[i] = rnd.Next(0,33);
     }
-    else
-    {
-       Console.WriteLine($"{number} -> нет"); 
-    }
-return n;
 }
-int res = Palindrom(number);
+Result(array);
+void PrintV (int[] arr)
+{
+Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+
+        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+
+        else Console.Write(array[i]);
+
+    }
+Console.Write("]");
+}
+PrintV(array);
