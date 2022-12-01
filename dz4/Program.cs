@@ -23,14 +23,15 @@ Console.Write("]");
 }
 int Evennumbers(int[] array)
 {
-    int sum = 0;
+    int Even = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[i] % 2 == 0  ) sum = 1 + sum;
+        if(i % 2 == 0  );
+        else Even = array[i] + Even;
     }
-return sum;
+return Even;
 }
-int[] sum22 = Result(4,100,999);
-int summa = Evennumbers(sum22);
-PrintV(sum22);
-Console.WriteLine($"-> {summa}");
+int[] massive = Result(4,0,100);
+int evennumvers = Evennumbers(massive);
+PrintV(massive);
+Console.WriteLine($"-> {evennumvers}");
