@@ -1,16 +1,43 @@
-﻿Console.WriteLine("введите значение b1");
-double b1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите число k1");
-double k1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите значение b2");
-double b2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите число k2");
-double k2 = Convert.ToInt32(Console.ReadLine());
-double Result(double B1, double K1,double B2,double K2)
+﻿Console.WriteLine("Позиция№1 ");
+int firstmatrix = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Позиция№2 ");
+int doublematrix = Convert.ToInt32(Console.ReadLine());
+int[,] CreateMatrixRndInt1(int rows, int columns)
 {
-    double x = (-B2 + B1)/(-K1 + K2);
-    double y = K2 * x + B2;
-    return y;
+    int[,] matrix = new int[rows, columns];
+    Random rnd = new Random();
+
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = rnd.Next(10, 100 + 1);   
+        }
+
+    }
+    return matrix;
 }
-double tohka  =  Result(b1,k1,b2,k2);
-Console.WriteLine($"две прямые пересекутся в точке с координатами ({tohka};{tohka})");
+void PrintMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        Console.Write("|");
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4}, ");
+            else Console.Write($"{matrix[i, j],4}   ");
+        }
+        Console.WriteLine("|");
+    }
+}
+int[,] CreateMatrixRndInt2(int rows, int columns, int first, int doublee)
+{ 
+  int[,] matrix = new int[rows, columns];
+  if (rows >= first) if (columns >= doublee) Console.WriteLine($"{first},{doublee} -> Есть");
+  else Console.WriteLine($"{first},{doublee} -> Такого элемента в масиве нет"); 
+   else Console.WriteLine($"{first},{doublee} -> Такого элемента в масиве нет");
+  return matrix;
+}
+int[,] n = CreateMatrixRndInt1(3,4);
+int[,] s = CreateMatrixRndInt2(3,4,firstmatrix,doublematrix);
+PrintMatrix(n);
