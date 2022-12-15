@@ -1,37 +1,16 @@
-﻿int[] Result(int size, int min, int max)
+﻿Console.WriteLine("введите значение b1");
+double b1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите число k1");
+double k1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите значение b2");
+double b2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите число k2");
+double k2 = Convert.ToInt32(Console.ReadLine());
+double Result(double B1, double K1,double B2,double K2)
 {
-    int[] array = new int[size];
-    Random rnd = new Random();
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = rnd.Next(min, max+1);
-    }
-return array;
+    double x = (-B2 + B1)/(-K1 + K2);
+    double y = K2 * x + B2;
+    return y;
 }
-void PrintV (int[] array)
-{
-Console.Write("[");
-    for (int i = 0; i < array.Length; i++)
-    {
-
-        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
-
-        else Console.Write(array[i]);
-
-    }
-Console.Write("]");
-}
-int Evennumbers(int[] array)
-{
-    int Even = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if(i % 2 == 0  );
-        else Even = array[i] + Even;
-    }
-return Even;
-}
-int[] massive = Result(4,0,100);
-int evennumvers = Evennumbers(massive);
-PrintV(massive);
-Console.WriteLine($"-> {evennumvers}");
+double tohka  =  Result(b1,k1,b2,k2);
+Console.WriteLine($"две прямые пересекутся в точке с координатами ({tohka};{tohka})");
